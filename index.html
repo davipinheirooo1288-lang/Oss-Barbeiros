@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Oss Barbeiros — Barbearia Premium em Fortaleza</title>
+<meta name="description" content="Barbearia masculina premium em Fortaleza. Cortes, barba, tratamentos capilares e cuidados pessoais. Três unidades: Cocó, Cambeba e Meireles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#">
+    <img src="./images/logo-oss.jpg" alt="Logo Oss Barbeiros" class="nav-logo-img">
+    <span class="nav-logo-text">OSS BARBEIROS</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#unidades">Unidades</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('waOverlay').classList.add('open')">Agendar</button>
+  <button class="nav-mobile-btn" id="navMobileBtn">
+    <svg width="24" height="24" fill="none" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+</nav>
+
+<!-- WA MODAL -->
+<div class="wa-overlay" id="waOverlay">
+  <div class="wa-modal">
+    <button class="wa-close" id="waClose">&#10005;</button>
+    <div class="wa-modal-title">Agendar Serviço</div>
+    <div class="wa-modal-sub">Escolha a unidade desejada e será direcionado ao WhatsApp com a mensagem de agendamento pronta.</div>
+    <button class="wa-unit-btn-modal" onclick="window.open('https://wa.me/558596823549?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20unidade%20Coc%C3%B3.','_blank')">
+      <div><div class="wa-unit-btn-modal-name">Oss Barbeiros Cocó</div><div class="wa-unit-btn-modal-tel">(85) 9682-3549</div></div>
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="wa-unit-btn-modal" onclick="window.open('https://wa.me/558530516106?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20unidade%20Cambeba.','_blank')">
+      <div><div class="wa-unit-btn-modal-name">Oss Barbeiros Cambeba</div><div class="wa-unit-btn-modal-tel">(85) 3051-6106</div></div>
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="wa-unit-btn-modal" onclick="window.open('https://wa.me/558530674746?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20unidade%20Meireles.','_blank')">
+      <div><div class="wa-unit-btn-modal-name">Oss Barbeiros Meireles</div><div class="wa-unit-btn-modal-tel">(85) 3067-4746</div></div>
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Barbearia Premium em Fortaleza</div>
+    <h1 class="hero-title">Arte e <em>Precisão</em></h1>
+    <p class="hero-sub">Três unidades. Uma só identidade de excelência.<br>O melhor da barbearia masculina em Fortaleza.</p>
+    <div class="hero-actions">
+      <a href="#servicos" class="btn-solid">Ver Serviços</a>
+      <button class="btn-ghost" onclick="document.getElementById('waOverlay').classList.add('open')">Agendar Horário</button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div><div class="hero-stat-num">3</div><div class="hero-stat-label">Unidades</div></div>
+    <div><div class="hero-stat-num">10+</div><div class="hero-stat-label">Anos de Experiência</div></div>
+    <div><div class="hero-stat-num">5★</div><div class="hero-stat-label">Avaliação Google</div></div>
+  </div>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="section-tag">Nosso Menu</div>
+  <h2 class="section-title">Serviços</h2>
+  <p class="section-sub">Do corte clássico ao tratamento facial — cada detalhe importa.</p>
+
+  <div class="services-categories">
+    <button class="serv-cat-btn active" data-cat="all">Todos</button>
+    <button class="serv-cat-btn" data-cat="corte">Cortes</button>
+    <button class="serv-cat-btn" data-cat="barba">Barba</button>
+    <button class="serv-cat-btn" data-cat="cabelo">Cabelo &amp; Estética</button>
+    <button class="serv-cat-btn" data-cat="cuidado">Cuidados Pessoais</button>
+    <button class="serv-cat-btn" data-cat="ambiente">Ambiente</button>
+  </div>
+
+  <div class="services-grid">
+    <!-- CORTE -->
+    <div class="service-card" data-cat="corte">
+      <div class="service-img-wrap"><img src="./images/corte-tesoura.jpg" alt="Corte com Tesoura"></div>
+      <div class="service-body"><div class="service-cat-tag">Corte</div><div class="service-name">Corte com Tesoura</div></div>
+    </div>
+    <div class="service-card" data-cat="corte">
+      <div class="service-img-wrap"><img src="./images/corte-navalha.jpg" alt="Corte com Navalha"></div>
+      <div class="service-body"><div class="service-cat-tag">Corte</div><div class="service-name">Corte com Navalha</div></div>
+    </div>
+    <div class="service-card" data-cat="corte">
+      <div class="service-img-wrap"><img src="./images/corte-masculino.jpg" alt="Corte Masculino"></div>
+      <div class="service-body"><div class="service-cat-tag">Corte</div><div class="service-name">Corte Masculino</div></div>
+    </div>
+    <div class="service-card" data-cat="corte">
+      <div class="service-img-wrap"><img src="./images/cortes-infantis.jpg" alt="Cortes Infantis"></div>
+      <div class="service-body"><div class="service-cat-tag">Corte</div><div class="service-name">Cortes Infantis</div></div>
+    </div>
+    <div class="service-card" data-cat="corte">
+      <div class="service-img-wrap"><img src="./images/disfarce-fios-brancos.jpg" alt="Disfarce de Fios Brancos"></div>
+      <div class="service-body"><div class="service-cat-tag">Corte</div><div class="service-name">Disfarce de Fios Brancos</div></div>
+    </div>
+    <div class="service-card" data-cat="corte">
+      <div class="service-img-wrap"><img src="./images/raspar-cabeca.jpg" alt="Raspar a Cabeça"></div>
+      <div class="service-body"><div class="service-cat-tag">Corte</div><div class="service-name">Raspar a Cabeça</div></div>
+    </div>
+
+    <!-- BARBA -->
+    <div class="service-card" data-cat="barba">
+      <div class="service-img-wrap"><img src="./images/barba-completa.jpg" alt="Barba Completa"></div>
+      <div class="service-body"><div class="service-cat-tag">Barba</div><div class="service-name">Barba Completa</div></div>
+    </div>
+    <div class="service-card" data-cat="barba">
+      <div class="service-img-wrap"><img src="./images/barba-navalha.jpg" alt="Barba com Navalha"></div>
+      <div class="service-body"><div class="service-cat-tag">Barba</div><div class="service-name">Barba com Navalha</div></div>
+    </div>
+    <div class="service-card" data-cat="barba">
+      <div class="service-img-wrap"><img src="./images/aparar-barba.jpg" alt="Aparar a Barba"></div>
+      <div class="service-body"><div class="service-cat-tag">Barba</div><div class="service-name">Aparar a Barba</div></div>
+    </div>
+    <div class="service-card" data-cat="barba">
+      <div class="service-img-wrap"><img src="./images/condicionamento-tingimento.jpg" alt="Condicionamento e Tingimento"></div>
+      <div class="service-body"><div class="service-cat-tag">Barba</div><div class="service-name">Condicionamento e Tingimento</div></div>
+    </div>
+    <div class="service-card" data-cat="barba">
+      <div class="service-img-wrap"><img src="./images/sobrancelha-navalha.jpg" alt="Sobrancelha na Navalha"></div>
+      <div class="service-body"><div class="service-cat-tag">Barba</div><div class="service-name">Sobrancelha na Navalha</div></div>
+    </div>
+
+    <!-- CABELO -->
+    <div class="service-card" data-cat="cabelo">
+      <div class="service-img-wrap"><img src="./images/alisamento-americano.jpg" alt="Alisamento Americano"></div>
+      <div class="service-body"><div class="service-cat-tag">Cabelo</div><div class="service-name">Alisamento Americano</div></div>
+    </div>
+    <div class="service-card" data-cat="cabelo">
+      <div class="service-img-wrap"><img src="./images/alinhamento-marroquino.jpg" alt="Alinhamento Marroquino"></div>
+      <div class="service-body"><div class="service-cat-tag">Cabelo</div><div class="service-name">Alinhamento Marroquino</div></div>
+    </div>
+    <div class="service-card" data-cat="cabelo">
+      <div class="service-img-wrap"><img src="./images/coloracao-platinado.jpg" alt="Coloração / Platinado"></div>
+      <div class="service-body"><div class="service-cat-tag">Cabelo</div><div class="service-name">Coloração / Platinado</div></div>
+    </div>
+    <div class="service-card" data-cat="cabelo">
+      <div class="service-img-wrap"><img src="./images/cabelo-hidratacao.jpg" alt="Hidratação Profunda"></div>
+      <div class="service-body"><div class="service-cat-tag">Cabelo</div><div class="service-name">Hidratação Profunda</div></div>
+    </div>
+    <div class="service-card" data-cat="cabelo">
+      <div class="service-img-wrap"><img src="./images/tratamento-capilar.jpg" alt="Tratamento Capilar"></div>
+      <div class="service-body"><div class="service-cat-tag">Cabelo</div><div class="service-name">Tratamento Capilar</div></div>
+    </div>
+
+    <!-- CUIDADO PESSOAL -->
+    <div class="service-card" data-cat="cuidado">
+      <div class="service-img-wrap"><img src="./images/limpeza-pele.jpg" alt="Limpeza Profunda de Pele"></div>
+      <div class="service-body"><div class="service-cat-tag">Cuidado Pessoal</div><div class="service-name">Limpeza Profunda de Pele</div></div>
+    </div>
+    <div class="service-card" data-cat="cuidado">
+      <div class="service-img-wrap"><img src="./images/acne-facial.jpg" alt="Tratamento de Acne Facial"></div>
+      <div class="service-body"><div class="service-cat-tag">Cuidado Pessoal</div><div class="service-name">Tratamento de Acne Facial</div></div>
+    </div>
+    <div class="service-card" data-cat="cuidado">
+      <div class="service-img-wrap"><img src="./images/rejuvenescimento.jpg" alt="Rejuvenescimento Facial"></div>
+      <div class="service-body"><div class="service-cat-tag">Cuidado Pessoal</div><div class="service-name">Rejuvenescimento Facial</div></div>
+    </div>
+    <div class="service-card" data-cat="cuidado">
+      <div class="service-img-wrap"><img src="./images/massagem-relaxante.jpg" alt="Massagem Relaxante"></div>
+      <div class="service-body"><div class="service-cat-tag">Cuidado Pessoal</div><div class="service-name">Massagem Relaxante</div></div>
+    </div>
+    <div class="service-card" data-cat="cuidado">
+      <div class="service-img-wrap"><img src="./images/manicure-masculina.jpg" alt="Manicure Masculina"></div>
+      <div class="service-body"><div class="service-cat-tag">Cuidado Pessoal</div><div class="service-name">Manicure Masculina</div></div>
+    </div>
+    <div class="service-card" data-cat="cuidado">
+      <div class="service-img-wrap"><img src="./images/depilacao-corporal.jpg" alt="Depilação Corporal"></div>
+      <div class="service-body"><div class="service-cat-tag">Cuidado Pessoal</div><div class="service-name">Depilação Corporal</div></div>
+    </div>
+
+    <!-- AMBIENTE -->
+    <div class="service-card service-card-wide" data-cat="ambiente">
+      <div class="service-img-wrap"><img src="./images/bar-barbearia.jpg" alt="Bar & Barbearia"></div>
+      <div class="service-body"><div class="service-cat-tag">Ambiente</div><div class="service-name">Bar &amp; Barbearia — Café e Bebidas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIDADES -->
+<section id="unidades">
+  <div class="section-tag">Onde estamos</div>
+  <h2 class="section-title">Nossas <em>Unidades</em></h2>
+  <p class="section-sub">Três localizações estratégicas para melhor atendê-lo em Fortaleza.</p>
+
+  <div class="units-container">
+    <div class="units-tabs">
+      <button class="unit-tab-btn active" data-unit="unit-coco">Cocó</button>
+      <button class="unit-tab-btn" data-unit="unit-cambeba">Cambeba</button>
+      <button class="unit-tab-btn" data-unit="unit-meireles">Meireles</button>
+    </div>
+
+    <div class="unit-content">
+      <!-- COCO -->
+      <div class="unit-panel active" id="unit-coco">
+        <div class="unit-info">
+          <h3>Oss Barbeiros Cocó</h3>
+          <div class="unit-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">4,9 — 289 avaliações no Google</span>
+          </div>
+          <div class="unit-details">
+            <div class="detail-row">
+              <span class="detail-label">Endereço</span>
+              <span class="detail-val">Av. Eng. Santana Jr., 1941 – loja 5, Cocó, Fortaleza – CE, 60192-205</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Telefone</span>
+              <span class="detail-val">(85) 9682-3549</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Horário</span>
+              <span class="detail-val">Ter–Sex: 09:00–19:30 · Sáb: 09:00–18:30, Dom e Seg: Fechado</span>
+            </div>
+          </div>
+          <div class="unit-actions">
+            <a href="https://maps.app.goo.gl/xNfH5m53yXDPXovR8" target="_blank" class="unit-link">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l-4 4-4-4m4 4V4"/></svg> Ver no Maps
+            </a>
+            <a href="https://www.instagram.com/ossbarbeiros" target="_blank" class="unit-link">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="2" y="2" rx="4"/><circle cx="12" cy="12" r="3"/><path d="M15.5 6.5h.01"/></svg> Instagram
+            </a>
+          </div>
+        </div>
+        <div class="unit-map">
+          <iframe src="https://maps.google.com/maps?q=-3.7427319,-38.4860876&output=embed&z=17" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- CAMBEBA -->
+      <div class="unit-panel" id="unit-cambeba">
+        <div class="unit-info">
+          <h3>Oss Barbeiros Cambeba</h3>
+          <div class="unit-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">4,9 — 61 avaliações no Google</span>
+          </div>
+          <div class="unit-details">
+            <div class="detail-row">
+              <span class="detail-label">Endereço</span>
+              <span class="detail-val">R. Crisanto Moreira da Rocha, 1600 – Loja 11, Cambeba, Fortaleza – CE, 60822-305</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Telefone</span>
+              <span class="detail-val">(85) 3051-6106</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Horário</span>
+              <span class="detail-val">Ter–Sex: 08:00–19:30 · Sáb: 08:00–18:30, Dom e Seg: Fechado</span>
+            </div>
+          </div>
+          <div class="unit-actions">
+            <a href="https://maps.app.goo.gl/EW6nAKsSKNcviNpG7" target="_blank" class="unit-link">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l-4 4-4-4m4 4V4"/></svg> Ver no Maps
+            </a>
+            <a href="https://www.instagram.com/ossbarbeiroscambeba/" target="_blank" class="unit-link">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="2" y="2" rx="4"/><circle cx="12" cy="12" r="3"/><path d="M15.5 6.5h.01"/></svg> Instagram
+            </a>
+          </div>
+        </div>
+        <div class="unit-map">
+          <iframe src="https://maps.google.com/maps?q=-3.8020455,-38.4817614&output=embed&z=17" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- MEIRELES -->
+      <div class="unit-panel" id="unit-meireles">
+        <div class="unit-info">
+          <h3>Oss Barbeiros Meireles</h3>
+          <div class="unit-rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">4,9 — 310 avaliações no Google</span>
+          </div>
+          <div class="unit-details">
+            <div class="detail-row">
+              <span class="detail-label">Endereço</span>
+              <span class="detail-val">Av. Antônio Justa, 3451, Meireles, Fortaleza – CE, 60165-090</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Telefone</span>
+              <span class="detail-val">(85) 3067-4746</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Horário</span>
+              <span class="detail-val">Ter–Sex: 09:00–19:30 · Sáb: 09:00–18:30, Dom e Seg: Fechado</span>
+            </div>
+          </div>
+          <div class="unit-actions">
+            <a href="https://maps.app.goo.gl/eAaUZHFH9tEzHpYKA" target="_blank" class="unit-link">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l-4 4-4-4m4 4V4"/></svg> Ver no Maps
+            </a>
+            <a href="https://www.instagram.com/ossbarbeirosmeireles" target="_blank" class="unit-link">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="2" y="2" rx="4"/><circle cx="12" cy="12" r="3"/><path d="M15.5 6.5h.01"/></svg> Instagram
+            </a>
+          </div>
+        </div>
+        <div class="unit-map">
+          <iframe src="https://maps.google.com/maps?q=-3.7289946,-38.4895505&output=embed&z=17" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-tag">Experiências</div>
+  <h2 class="section-title">Clientes que voltam <em>sempre</em></h2>
+  <p class="section-sub">Avaliações reais de quem já viveu a experiência Oss Barbeiros.</p>
+  <div class="testimonials-wrap">
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Atendimento e profissionais incríveis. Só corto meu cabelo com o Rene."</div><div class="testimonial-author">Cliente Verificado</div><div class="testimonial-unit">Unidade Cocó</div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Melhor Barbearia de Fortaleza sem dúvidas! Indico demais o barbeiro Fernandes!"</div><div class="testimonial-author">Cliente Verificado</div><div class="testimonial-unit">Unidade Cambeba</div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"O barbeiro Aldo é excelente. Melhor barbeiro que já pegou numa tesoura..."</div><div class="testimonial-author">Cliente Verificado</div><div class="testimonial-unit">Unidade Meireles</div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Atendimento pelo Ilipe, ótimo atendimento. Lugar muito agradável."</div><div class="testimonial-author">Cliente Verificado</div><div class="testimonial-unit">Unidade Cocó</div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Fui atendido pelo Kassio, rapaz muito simpático e atencioso, ótimo trabalho."</div><div class="testimonial-author">Cliente Verificado</div><div class="testimonial-unit">Unidade Cambeba</div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Cortei meu cabelo com o Bruno. Me senti em casa e teve até cafézinho! 10/10."</div><div class="testimonial-author">Cliente Verificado</div><div class="testimonial-unit">Unidade Meireles</div></div>
+    </div>
+  </div>
+  <div class="testimonials-nav">
+    <button class="t-nav-btn" id="tPrev"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 9H3M8 4L3 9l5 5"/></svg></button>
+    <button class="t-nav-btn" id="tNext"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9h12M10 4l5 5-5 5"/></svg></button>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="contact-left">
+    <h2>Agende seu horário.<br><em>Escolha sua unidade.</em></h2>
+    <p>Ligue ou agende pelo WhatsApp — rápido e simples.</p>
+  </div>
+  <div class="contact-phones">
+    <div class="contact-phone-card"><div class="contact-phone-unit">Cocó</div><div class="contact-phone-num"><a href="tel:+558596823549">(85) 9682-3549</a></div></div>
+    <div class="contact-phone-card"><div class="contact-phone-unit">Cambeba</div><div class="contact-phone-num"><a href="tel:+558530516106">(85) 3051-6106</a></div></div>
+    <div class="contact-phone-card"><div class="contact-phone-unit">Meireles</div><div class="contact-phone-num"><a href="tel:+558530674746">(85) 3067-4746</a></div></div>
+    <div class="contact-phone-card" onclick="document.getElementById('waOverlay').classList.add('open')"><div class="contact-phone-unit">WhatsApp</div><div class="contact-phone-num" style="font-size:.85rem">Escolher unidade →</div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="nav-logo-text" style="font-size:1.3rem;margin-bottom:1.2rem">OSS BARBEIROS</div>
+      <p class="footer-brand-desc">Barbearia masculina premium em Fortaleza. Três unidades, uma identidade: precisão, estilo e excelência desde 2015.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Cocó</div>
+      <div class="footer-unit-name">Oss Barbeiros Cocó</div>
+      <div class="footer-detail"><a href="tel:+558596823549">(85) 9682-3549</a></div>
+      <a class="footer-insta-link" href="https://www.instagram.com/ossbarbeiros" target="_blank">@ossbarbeiros</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Cambeba</div>
+      <div class="footer-unit-name">Oss Barbeiros Cambeba</div>
+      <div class="footer-detail"><a href="tel:+558530516106">(85) 3051-6106</a></div>
+      <a class="footer-insta-link" href="https://www.instagram.com/ossbarbeiroscambeba/" target="_blank">@ossbarbeiroscambeba</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Meireles</div>
+      <div class="footer-unit-name">Oss Barbeiros Meireles</div>
+      <div class="footer-detail"><a href="tel:+558530674746">(85) 3067-4746</a></div>
+      <a class="footer-insta-link" href="https://www.instagram.com/ossbarbeirosmeireles" target="_blank">@ossbarbeirosmeireles</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Oss Barbeiros. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
